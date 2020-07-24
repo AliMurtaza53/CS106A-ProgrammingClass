@@ -14,15 +14,27 @@ user has made eight incorrect guesses.
 
 import random
 
+def main():
+    """
+    To play the game, we first select the secret word for the
+    player to guess and then play the game using that secret word.
+    """
+    secret_word = get_word()
+    play_game(secret_word)
 
+    
 LEXICON_FILE = "Lexicon.txt"    # File to read word list from
 INITIAL_GUESSES = 8             # Initial number of guesses player starts with
 
 
 def play_game(secret_word):
-
+    """
+    string -> string
+    Fn takes a word unknown to user, and allows user to play WordGuess game, and displays result of the game 
+    """
+    # game starts with 8 guesses
     guesses_left = INITIAL_GUESSES
-    # start with dashes for the word
+    # show just dashes for letters in the word
     current_guess = "-" * len(secret_word)
 
     # for loop to keep track of guesses:
@@ -115,16 +127,6 @@ def print_exit_msg(current_guess, secret_word):
     else:
         print("Sorry, you lost. The secret word was: {}".format(secret_word))
 
-
-
-
-def main():
-    """
-    To play the game, we first select the secret word for the
-    player to guess and then play the game using that secret word.
-    """
-    secret_word = get_word()
-    play_game(secret_word)
 
 
 # This provided line is required at the end of a Python file
