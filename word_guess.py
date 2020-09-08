@@ -73,11 +73,7 @@ def play_game(secret_word):
 def get_word():
     """
     This function returns a secret word that the player is trying
-    to guess in the game.  This function initially has a very small
-    list of words that it can select from to make it easier for you
-    to write and debug the main game playing program.  In Part II of
-    writing this program, you will re-implement this function to
-    select a word from a much larger list by reading a list of words
+    to guess in the game from a large list by reading a list of words
     from the file specified by the constant LEXICON_FILE.
     """
     f = open(LEXICON_FILE, "r")
